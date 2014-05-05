@@ -1,0 +1,31 @@
+This project was created to prove/disprove sharing blueprint definitions
+via OSGI Import/Export Package mechanisms. There are two aims
+
+1. Prove/disprove that blueprints can be imported (doesn't appear to be the case)
+2. Work out how packages required to satisfy instantiation of the blueprint
+   can be automatically provided to the module importing the blueprint file
+   
+Use Case (update once looking at actual code)
+
+	Share common camel config between components
+		e.g. JMS Component Configuration (could maybe do this with customer components exposed as OSGi services?)
+	Shared common CXF config between components
+		e.g. if using shared code, CXF should be configured to use specific interceptors etc.
+	Share common bean defs between components
+		e.g. a list of beans that are required for a shared route to do its job
+
+To run
+
+1. create a clean fabric
+2. cd importer;  mvn install fabric:deploy
+3. cd exporter;  mvn install fabric:deploy
+4. container-add-profile root exporter
+5. container-add-profile root importer
+
+Can then check various things in fuse
+		
+find-class shared-blueprint.xml
+  proves its been exported
+  
+headers "Import Blueprint :: Importer"
+  proves its trying to import

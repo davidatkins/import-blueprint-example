@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Export-Package: org.jboss.quickstarts.fuse.eip;uses:="org.apache.camel
+ .language"
+Built-By: dave
+Tool: Bnd-1.15.0
+Bundle-Name: Import Blueprint :: Importer
+Created-By: Apache Maven Bundle Plugin
+Bundle-Blueprint: exported/shared-blueprint.xml
+Build-Jdk: 1.7.0_45
+Bundle-Version: 1.0.0.SNAPSHOT
+Bnd-LastModified: 1399280374379
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.camel.language;version="[2.12,3)"
+Bundle-SymbolicName: uk.co.davidatkins.import-blueprint.importer
+

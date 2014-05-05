@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Export-Package: exported
+Built-By: dave
+Build-Jdk: 1.7.0_45
+Bundle-Version: 1.0.0.SNAPSHOT
+Tool: Bnd-1.15.0
+Bundle-Name: Import Blueprint :: Exporter
+Bnd-LastModified: 1399279650680
+Created-By: Apache Maven Bundle Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: uk.co.davidatkins.import-blueprint.exporter
+Import-Package: org.apache.camel.language;version="[2.12,3)"
+
